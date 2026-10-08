@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sympy-openmm-compiler"
+version = "0.1.0"
+description = "A scalar SymPy-to-OpenMM custom-expression compiler with pinned OpenFE examples"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["sympy>=1.12,<2"]
+license = "MIT"
+
+[dependency-groups]
+dev = ["pytest>=7", "numpy>=1.24"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]
+markers = ["openmm: opt-in native OpenMM integration tests"]

@@ -1,0 +1,296 @@
+{
+  "status": "passed_independent_numerical_validation",
+  "source_commit": "18208178d084a28ecbd93ce48ebea75d6b1b733e",
+  "source_url": "https://github.com/OpenFreeEnergy/openfe/blob/18208178d084a28ecbd93ce48ebea75d6b1b733e/src/openfe/protocols/openmm_rfe/_rfe_utils/relative.py",
+  "native_openmm": {
+    "executed": false,
+    "reason": "This validation tool uses an independent evaluator, never native OpenMM. See pytest_results.txt for native-suite execution/skip status.",
+    "run_command": "REQUIRE_OPENMM=1 python -m pytest -m openmm -q",
+    "environment_status": "NOT EXECUTED: no installed OpenMM; installation attempt failed due unavailable network/DNS."
+  },
+  "source_fixture_verification": {
+    "method": "Transcribed force-string literals inspected through web retrieval of the pinned source",
+    "automatic_source_download_and_ast_verification_executed": false,
+    "reason": "Runtime network access unavailable; verify_upstream.py is included for local verification."
+  },
+  "environment": {
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "numpy": "2.3.5",
+    "pytest": "9.0.2"
+  },
+  "seed": 20260926,
+  "total_energy_comparisons": 7000,
+  "total_local_derivative_comparisons": 24000,
+  "scaled_error_definition": "abs(actual - expected) / max(1, abs(expected))",
+  "additional_pytest_checks": "Symbolic substitution, compiled symbolic derivatives, finite differences against an independent hand-written model, branch boundaries, pair symmetry, randomized general expressions, and error handling.",
+  "elapsed_seconds": 2.6525621199999705,
+  "results": [
+    {
+      "model": "bond",
+      "force_class": "CustomBondForce",
+      "cse": false,
+      "samples": 500,
+      "energy_comparisons": 500,
+      "local_derivative_comparisons": 1000,
+      "derivative_variables": [
+        "r",
+        "lambda_bonds"
+      ],
+      "max_scaled_energy_error_vs_pinned_expression": 0.0,
+      "max_scaled_energy_error_vs_handwritten_oracle": 0.0,
+      "max_scaled_derivative_error_vs_pinned_expression": 0.0,
+      "generated_characters": 180,
+      "generated_intermediates": 2
+    },
+    {
+      "model": "bond",
+      "force_class": "CustomBondForce",
+      "cse": true,
+      "samples": 500,
+      "energy_comparisons": 500,
+      "local_derivative_comparisons": 1000,
+      "derivative_variables": [
+        "r",
+        "lambda_bonds"
+      ],
+      "max_scaled_energy_error_vs_pinned_expression": 0.0,
+      "max_scaled_energy_error_vs_handwritten_oracle": 0.0,
+      "max_scaled_derivative_error_vs_pinned_expression": 0.0,
+      "generated_characters": 172,
+      "generated_intermediates": 3
+    },
+    {
+      "model": "angle",
+      "force_class": "CustomAngleForce",
+      "cse": false,
+      "samples": 500,
+      "energy_comparisons": 500,
+      "local_derivative_comparisons": 1000,
+      "derivative_variables": [
+        "theta",
+        "lambda_angles"
+      ],
+      "max_scaled_energy_error_vs_pinned_expression": 0.0,
+      "max_scaled_energy_error_vs_handwritten_oracle": 0.0,
+      "max_scaled_derivative_error_vs_pinned_expression": 0.0,
+      "generated_characters": 192,
+      "generated_intermediates": 2
+    },
+    {
+      "model": "angle",
+      "force_class": "CustomAngleForce",
+      "cse": true,
+      "samples": 500,
+      "energy_comparisons": 500,
+      "local_derivative_comparisons": 1000,
+      "derivative_variables": [
+        "theta",
+        "lambda_angles"
+      ],
+      "max_scaled_energy_error_vs_pinned_expression": 0.0,
+      "max_scaled_energy_error_vs_handwritten_oracle": 0.0,
+      "max_scaled_derivative_error_vs_pinned_expression": 0.0,
+      "generated_characters": 183,
+      "generated_intermediates": 3
+    },
+    {
+      "model": "torsion",
+      "force_class": "CustomTorsionForce",
+      "cse": false,
+      "samples": 500,
+      "energy_comparisons": 500,
+      "local_derivative_comparisons": 1000,
+      "derivative_variables": [
+        "theta",
+        "lambda_torsions"
+      ],
+      "max_scaled_energy_error_vs_pinned_expression": 0.0,
+      "max_scaled_energy_error_vs_handwritten_oracle": 0.0,
+      "max_scaled_derivative_error_vs_pinned_expression": 0.0,
+      "generated_characters": 192,
+      "generated_intermediates": 2
+    },
+    {
+      "model": "torsion",
+      "force_class": "CustomTorsionForce",
+      "cse": true,
+      "samples": 500,
+      "energy_comparisons": 500,
+      "local_derivative_comparisons": 1000,
+      "derivative_variables": [
+        "theta",
+        "lambda_torsions"
+      ],
+      "max_scaled_energy_error_vs_pinned_expression": 0.0,
+      "max_scaled_energy_error_vs_handwritten_oracle": 0.0,
+      "max_scaled_derivative_error_vs_pinned_expression": 0.0,
+      "generated_characters": 192,
+      "generated_intermediates": 2
+    },
+    {
+      "model": "sterics_v1",
+      "force_class": "CustomNonbondedForce",
+      "cse": false,
+      "samples": 500,
+      "energy_comparisons": 500,
+      "local_derivative_comparisons": 2000,
+      "derivative_variables": [
+        "r",
+        "lambda_sterics_core",
+        "lambda_sterics_insert",
+        "lambda_sterics_delete"
+      ],
+      "max_scaled_energy_error_vs_pinned_expression": 5.367729439972464e-15,
+      "max_scaled_energy_error_vs_handwritten_oracle": 5.367729439972464e-15,
+      "max_scaled_derivative_error_vs_pinned_expression": 1.1915975673850282e-14,
+      "generated_characters": 992,
+      "generated_intermediates": 14
+    },
+    {
+      "model": "sterics_v1",
+      "force_class": "CustomNonbondedForce",
+      "cse": true,
+      "samples": 500,
+      "energy_comparisons": 500,
+      "local_derivative_comparisons": 2000,
+      "derivative_variables": [
+        "r",
+        "lambda_sterics_core",
+        "lambda_sterics_insert",
+        "lambda_sterics_delete"
+      ],
+      "max_scaled_energy_error_vs_pinned_expression": 5.367729439972464e-15,
+      "max_scaled_energy_error_vs_handwritten_oracle": 5.367729439972464e-15,
+      "max_scaled_derivative_error_vs_pinned_expression": 1.1915975673850282e-14,
+      "generated_characters": 967,
+      "generated_intermediates": 17
+    },
+    {
+      "model": "sterics_v2",
+      "force_class": "CustomNonbondedForce",
+      "cse": false,
+      "samples": 500,
+      "energy_comparisons": 500,
+      "local_derivative_comparisons": 2000,
+      "derivative_variables": [
+        "r",
+        "lambda_sterics_core",
+        "lambda_sterics_insert",
+        "lambda_sterics_delete"
+      ],
+      "max_scaled_energy_error_vs_pinned_expression": 4.715503537789463e-15,
+      "max_scaled_energy_error_vs_handwritten_oracle": 4.502974191521379e-15,
+      "max_scaled_derivative_error_vs_pinned_expression": 7.958782544234662e-15,
+      "generated_characters": 1371,
+      "generated_intermediates": 17
+    },
+    {
+      "model": "sterics_v2",
+      "force_class": "CustomNonbondedForce",
+      "cse": true,
+      "samples": 500,
+      "energy_comparisons": 500,
+      "local_derivative_comparisons": 2000,
+      "derivative_variables": [
+        "r",
+        "lambda_sterics_core",
+        "lambda_sterics_insert",
+        "lambda_sterics_delete"
+      ],
+      "max_scaled_energy_error_vs_pinned_expression": 4.547092697154125e-15,
+      "max_scaled_energy_error_vs_handwritten_oracle": 4.502974191521379e-15,
+      "max_scaled_derivative_error_vs_pinned_expression": 7.575064487192661e-15,
+      "generated_characters": 1332,
+      "generated_intermediates": 23
+    },
+    {
+      "model": "exceptions_v1",
+      "force_class": "CustomBondForce",
+      "cse": false,
+      "samples": 500,
+      "energy_comparisons": 500,
+      "local_derivative_comparisons": 2500,
+      "derivative_variables": [
+        "r",
+        "lambda_electrostatics_insert",
+        "lambda_electrostatics_delete",
+        "lambda_sterics_insert",
+        "lambda_sterics_delete"
+      ],
+      "max_scaled_energy_error_vs_pinned_expression": 5.684341886080802e-14,
+      "max_scaled_energy_error_vs_handwritten_oracle": 5.684341886080802e-14,
+      "max_scaled_derivative_error_vs_pinned_expression": 6.039613253960852e-14,
+      "generated_characters": 897,
+      "generated_intermediates": 11
+    },
+    {
+      "model": "exceptions_v1",
+      "force_class": "CustomBondForce",
+      "cse": true,
+      "samples": 500,
+      "energy_comparisons": 500,
+      "local_derivative_comparisons": 2500,
+      "derivative_variables": [
+        "r",
+        "lambda_electrostatics_insert",
+        "lambda_electrostatics_delete",
+        "lambda_sterics_insert",
+        "lambda_sterics_delete"
+      ],
+      "max_scaled_energy_error_vs_pinned_expression": 5.684341886080802e-14,
+      "max_scaled_energy_error_vs_handwritten_oracle": 5.684341886080802e-14,
+      "max_scaled_derivative_error_vs_pinned_expression": 5.3290705182007514e-14,
+      "generated_characters": 872,
+      "generated_intermediates": 14
+    },
+    {
+      "model": "exceptions_v2",
+      "force_class": "CustomBondForce",
+      "cse": false,
+      "samples": 500,
+      "energy_comparisons": 500,
+      "local_derivative_comparisons": 2500,
+      "derivative_variables": [
+        "r",
+        "lambda_electrostatics_insert",
+        "lambda_electrostatics_delete",
+        "lambda_sterics_insert",
+        "lambda_sterics_delete"
+      ],
+      "max_scaled_energy_error_vs_pinned_expression": 1.7968731226618166e-13,
+      "max_scaled_energy_error_vs_handwritten_oracle": 1.7968731226618166e-13,
+      "max_scaled_derivative_error_vs_pinned_expression": 1.175092123173532e-14,
+      "generated_characters": 1276,
+      "generated_intermediates": 14
+    },
+    {
+      "model": "exceptions_v2",
+      "force_class": "CustomBondForce",
+      "cse": true,
+      "samples": 500,
+      "energy_comparisons": 500,
+      "local_derivative_comparisons": 2500,
+      "derivative_variables": [
+        "r",
+        "lambda_electrostatics_insert",
+        "lambda_electrostatics_delete",
+        "lambda_sterics_insert",
+        "lambda_sterics_delete"
+      ],
+      "max_scaled_energy_error_vs_pinned_expression": 1.7968731226618166e-13,
+      "max_scaled_energy_error_vs_handwritten_oracle": 1.7968731226618166e-13,
+      "max_scaled_derivative_error_vs_pinned_expression": 1.175092123173532e-14,
+      "generated_characters": 1237,
+      "generated_intermediates": 20
+    }
+  ],
+  "pytest_result": {
+    "passed": 159,
+    "skipped": 1,
+    "failures": 0,
+    "errors": 0,
+    "output_file": "pytest_results.txt",
+    "standalone_output_file": "standalone_test_results.txt"
+  }
+}
